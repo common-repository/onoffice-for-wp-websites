@@ -1,0 +1,89 @@
+a.estate-status, div.estate-status {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+a.estate-status > span, div.estate-status > span {
+    transform: rotate(-45deg);
+    width: 220px;
+    height: 40px;
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    top: 40px;
+    left: -50px;
+    line-height: 18px;
+    border-width: 5px 0 5px 0;
+    border-style: solid;
+    border-color: #a3a3a3;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 1px 20px -2px #000000;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 7px 25px 7px 25px;
+}
+
+input[type=submit].match {
+    background-color: #559955;
+}
+
+div.multiselect[data-values="[]"] > input[type=button],
+div.multiselect[data-values="{}"] > input[type=button],
+div.multiselect[data-values=""] > input[type=button] {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+form[data-estate-search-name] #spinner {
+    visibility: hidden;
+    display: inline;
+    width: 40px;
+    top: -50px;
+    left: 10px;
+    position: relative;
+}
+
+form[data-estate-search-name] #spinner.thinking,
+form[data-applicant-form-id] #spinner.thinking {
+    animation: rotating 2s linear infinite;
+    visibility: visible;
+}
+
+form[data-applicant-form-id] #spinner {
+    visibility: hidden;
+    display: inline;
+    width: 40px;
+    vertical-align: middle;
+}
+
+.message{
+    display: none!important;
+}
+
+.oo-picture {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 0;
+    overflow: hidden;
+}
+
+.oo-responsive-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}

@@ -1,0 +1,36 @@
+{
+    "config": {
+        "platform": {
+            "php": "7.3"
+        }
+    },
+	"require-dev": {
+		"phpunit/phpunit": "^9.6",
+		"phpstan/phpstan": "*",
+		"php-coveralls/php-coveralls": "^2.7",
+		"symfony/process": "^5.4",
+        "phpcompatibility/php-compatibility": "*",
+		"wp-cli/i18n-command": "*",
+        "ext-xdebug": "*",
+        "yoast/phpunit-polyfills": "^3.0"
+    },
+    "prefer-stable" : true,
+	"autoload": {
+		 "psr-4": {
+			"onOffice\\SDK\\": "SDK/SDK/",
+			"onOffice\\WPlugin\\": "plugin/"
+		}
+	},
+	"autoload-dev": {
+		 "psr-4": {
+			"onOffice\\tests\\": "tests/"
+		}
+	},
+	"require": {
+		"php": ">=7.2.0",
+		"php-di/php-di": "^6.3.4",
+		"ext-curl": "*",
+		"select2/select2": "^4.0",
+		"erusev/parsedown": "^1.7"
+	}
+}
